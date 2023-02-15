@@ -32,6 +32,7 @@ def add():
     new_todo = Todo(title=title, complete=False)
     db.session.add(new_todo)
     db.session.commit()
+    #Control Flow
     return redirect(url_for("home"))
 
 #Routing
@@ -40,6 +41,7 @@ def update(todo_id):
     todo = Todo.query.filter_by(id=todo_id).first()
     todo.complete = not todo.complete
     db.session.commit()
+    #Control Flow
     return redirect(url_for("home"))
 
 #Routing

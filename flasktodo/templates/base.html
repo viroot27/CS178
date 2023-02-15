@@ -19,6 +19,7 @@
                 <label>Todo Title</label>
                 <input type="text" name="title" placeholder="Enter Todo..."><br>
             </div>
+            <!-- Button -->
             <button class="ui blue button" type="submit">Add</button>
         </form>
 
@@ -34,6 +35,7 @@
             <span class="ui green label">Completed</span>
             {% endif %}
 
+            <!-- Button -->
             <a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
             <a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>
         </div>
