@@ -50,6 +50,7 @@ def delete(todo_id):
     todo = Todo.query.filter_by(id=todo_id).first()
     db.session.delete(todo)
     db.session.commit()
+    #Control Flow
     return redirect(url_for("home"))
 
 if __name__ == "__main__":
